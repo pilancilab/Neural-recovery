@@ -1,40 +1,66 @@
 ## Introduction
 
-Test code for the following paper:
+This repository implements the code for the paper __Overparameterized ReLU Neural Networks Learn
 
-ReLU Neural Networks Learn Simple Models: Neural Isometry and Exact Recovery.
+the Simplest Model: Neural Isometry and Phase Transitions__.
+
+
 
 Suppose that $\mathbf{X}\in \mathbb{R}^{n\times d}$ and $\mathbf{y}\in \mathbb{R}^d$ are the data matrix and the label vector respectively. In the paper, we focus on the following two-layer neural networks:
 
 - ReLU networks:
+
+  
 $$
 f^\mathrm{ReLU}(\mathbf{X};\Theta) =(\mathbf{X}\mathbf{W}_1)_+\mathbf{w}_2, \quad \Theta = (\mathbf{W}_1,\mathbf{w}_2),
 $$
+
+
 where $\mathbf{W}_1\in \mathbb{R}^{d\times m}$ and $\mathbf{w}_2\in \mathbb{R}^{m}$.
 
 - ReLU networks with skip connections:
+
+  
 $$
 f^\mathrm{ReLU}(\mathbf{X};\Theta) =\mathbf{X}\mathbf{w}_{1,1}w_{2,1}+\sum_{i=2}^m (\mathbf{X}\mathbf{w}_{1,i})_+w_{2,i},
 $$
+
+
 where $\Theta = (\mathbf{W}_1,\mathbf{w}_2)$, $\mathbf{W}_1\in \mathbb{R}^{d\times m}$ and $\mathbf{w}_2\in \mathbb{R}^{m}$.
 
 - ReLU networks with normalization layers:
+
+
 $$
 f^\mathrm{ReLU}(\mathbf{X};\Theta) =\sum_{i=1}^m \operatorname{NM}_{\alpha_i}((\mathbf{X}\mathbf{w}_{1,i})_+)w_{2,i},
 $$
+
+
 where $\Theta = (\mathbf{W}_1,\mathbf{w}_2,\mathbf{\alpha})$ and the normalization operation $\operatorname{NM}_\alpha(\mathbf{v})$ is defined by
+
+
 $$
 \operatorname{NM}_{\alpha}(\mathbf{v}) = \frac{\mathbf{v}}{\|\mathbf{v}\|_2}\alpha, \mathbf{v}\in\mathbb{R}^n,\alpha\in \mathbb{R}.
 $$
 
+
+
 We consider the regularized training problem 
+
+
 $$
 \min_{\Theta} \frac{1}{2}\|f(\mathbf{X};\Theta)-\mathbf{y}\|_2^2+\frac{\beta}{2}R(\Theta).
 $$
+
+
 When $\beta\to 0$, the optimal solution of the above problem solves the following minimal norm problem
+
+
 $$
     \min_{\Theta} R(\Theta), \text{ s.t. } f(\mathbf{X};\Theta)=\mathbf{y}.
 $$
+
+
 
 We include code to solve convex optimization formulations of the minimal norm problem and to train nerual networks discussed in the paper, respectively. We also include code to plot the phase transition graphs shown in the paper. 
 
@@ -72,6 +98,8 @@ python ncvx_train_skip.py --n 400 --d 100 --sample 10 --sigma 0 --optw 0 --optx 
 
 ## Maintainers
 Yixuan Hua (<huayixuan@pku.edu.cn>)
+
+Yifei Wang (wangyf18@stanford.edu)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
