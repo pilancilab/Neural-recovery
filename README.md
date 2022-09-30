@@ -18,7 +18,7 @@ where $\mathbf{W}_1\in \mathbb{R}^{d\times m}$ and $\mathbf{w}_2\in \mathbb{R}^{
 
   
 $$
-f^\mathrm{ReLU}(\mathbf{X};\Theta) =\mathbf{X}\mathbf{w}_{1,1}w_{2,1}+\sum_{i=2}^m (\mathbf{X}\mathbf{w}_{1,i})_+w_{2,i},
+f^\mathrm{ReLU}(\mathbf{X};\Theta) =\mathbf{X}\mathbf{w}_{1,1} w_{2,1}+\sum_{i=2}^m (\mathbf{X}\mathbf{w}_{1,i})_+ w_{2,i},
 $$
 
 
