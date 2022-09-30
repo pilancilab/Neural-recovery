@@ -8,7 +8,7 @@ Suppose that $\mathbf{X}\in \mathbb{R}^{n\times d}$ and $\mathbf{y}\in \mathbb{R
 
   
 $$
-f^\mathrm{ReLU}(\mathbf{X};\Theta) =(\mathbf{X}\mathbf{W}_1)_+\mathbf{w}_2, \quad \Theta = (\mathbf{W}_1,\mathbf{w}_2),
+f^\mathrm{ReLU}(\mathbf{X};\Theta) ={(\mathbf{X}{\mathbf{W}}_1)}_+{\mathbf{w}}_2, \quad \Theta = (\mathbf{W}_1,\mathbf{w}_2),
 $$
 
 
