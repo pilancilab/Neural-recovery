@@ -1,10 +1,6 @@
-## Introduction
+This repository implements the code for the paper **Overparameterized ReLU Neural Networks Learn the Simplest Model: Neural Isometry and Phase Transitions**.
 
-This repository implements the code for the paper __Overparameterized ReLU Neural Networks Learn
-
-the Simplest Model: Neural Isometry and Phase Transitions__.
-
-
+# Introduction
 
 Suppose that $\mathbf{X}\in \mathbb{R}^{n\times d}$ and $\mathbf{y}\in \mathbb{R}^d$ are the data matrix and the label vector respectively. In the paper, we focus on the following two-layer neural networks:
 
@@ -66,13 +62,13 @@ We include code to solve convex optimization formulations of the minimal norm pr
 
 More details about the numerical experiments can be found in the appendix of the paper.
 
-## Requirements
+# Requirements
 
 When solving convex programs, [CVXPY](https://www.cvxpy.org/install/index.html) (version>=1.1.13) is needed. [Mosek](https://www.mosek.com/downloads/) solver is preferred. You can also change the solver according to the documentation of CVXPY.
 
 When training neural networks discussed in the paper, [PyTorch](https://pytorch.org/get-started/locally/) (version>=1.10.0) is needed.
 
-## Usage
+# Usage
 
 Compute the recovery rate of the planted linear neuron by solving the minimal norm problem for ReLU networks with skip connections over 5 independent trials. 
 ```bash
@@ -96,20 +92,24 @@ python ncvx_train_skip.py --n 400 --d 100 --sample 10 --sigma 0 --optw 0 --optx 
 - You can change `--save_details`, `--save_folder`, `--seed` accordingly. 
 - For ReLU networks with normalization layer, you can also set the number of planted neurons by changing `--neu`. Details about the supported types of planted neuron and data matrix can be found in the comments of the code.
 
-## Maintainers
+# Maintainers
+
 Yixuan Hua (<huayixuan@pku.edu.cn>)
 
 Yifei Wang (wangyf18@stanford.edu)
 
-## Contributing
+# Contributing
+
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
 
-## License
+# License
+
 [MIT](https://choosealicense.com/licenses/mit/)
 
-## Citation
+# Citation
+
 If you find this repository helpful, please consider citing:
 ```
 
