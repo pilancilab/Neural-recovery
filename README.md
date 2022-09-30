@@ -32,7 +32,7 @@ f^\mathrm{ReLU}(\mathbf{X};\Theta) =\sum_{i=1}^m \operatorname{NM}_{\alpha_i}((\
 $$
 
 
-where $\Theta = (\mathbf{W}_1,\mathbf{w}_2,\mathbf{\alpha})$ and the normalization operation $\operatorname{NM}_\alpha(\mathbf{v})$ is defined by
+where  $\Theta = (\mathbf{W}_1,\mathbf{w}_2,\mathbf{\alpha})$  and the normalization operation $\operatorname{NM}_\alpha(\mathbf{v})$  is defined by
 
 
 $$
