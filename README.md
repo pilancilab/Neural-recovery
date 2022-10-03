@@ -1,4 +1,4 @@
-This repository implements the code for the paper **Overparameterized ReLU Neural Networks Learn the Simplest Model: Neural Isometry and Phase Transitions**.
+This repository implements the code for the paper [**Overparameterized ReLU Neural Networks Learn the Simplest Model: Neural Isometry and Phase Transitions**][https://arxiv.org/abs/2209.15265].
 
 # Introduction
 
@@ -94,7 +94,7 @@ python ncvx_train_skip.py --n 400 --d 100 --sample 10 --sigma 0 --optw 0 --optx 
 
 # Maintainers
 
-Yixuan Hua (<huayixuan@pku.edu.cn>)
+Yixuan Hua (yh7422@princeton.edu)
 
 Yifei Wang (wangyf18@stanford.edu)
 
